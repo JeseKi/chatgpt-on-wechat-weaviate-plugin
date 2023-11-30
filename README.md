@@ -12,7 +12,7 @@
 ## 4. 启动方法
 要启动此插件，请导航到此插件的目录，复制`config.json.template`，然后将其重命名为`config.json`。在其中填入你的数据，格式如下：
 
-```json
+```python
 {
     "weaviate_url" : "YOUR_WEAVIATE_URL_HERE", # 你的Weaviate URL
     "weaviate_key" : "YOUR_WEAVIATE_KEY_HERE", # 你的Weaviate API密钥
