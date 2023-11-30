@@ -14,12 +14,12 @@
 
 ```json
 {
-    "weaviate_url" : "YOUR_WEAVIATE_URL_HERE", // 你的Weaviate URL
-    "weaviate_key" : "YOUR_WEAVIATE_KEY_HERE", // 你的Weaviate API密钥
-    "query_class" : "YOURCLASS", // 你的查询类
-    "query_limit" : 1, // 查询返回的条目限制
-    "query_fields" : ["question", "answer"], // 需要查询的字段
-    "response_fields" : { // 需要返回的字段
+    "weaviate_url" : "YOUR_WEAVIATE_URL_HERE", # 你的Weaviate URL
+    "weaviate_key" : "YOUR_WEAVIATE_KEY_HERE", # 你的Weaviate API密钥
+    "query_class" : "YOURCLASS", # 你的查询类
+    "query_limit" : 1, # 查询返回的条目限制
+    "query_fields" : ["question", "answer"], # 需要查询的字段
+    "response_fields" : { # 需要返回的字段
         "Question" : "question",
         "Answer" : "answer"
     }
