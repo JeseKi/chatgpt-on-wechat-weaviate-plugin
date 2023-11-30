@@ -1,0 +1,11 @@
+{
+    "weaviate_url" : "YOUR_WEAVIATE_URL_HERE",
+    "weaviate_key" : "YOUR_WEAVIATE_KEY_HERE",
+    "query_class" : "YOURCLASS",
+    "query_limit" : 1,
+    "query_fields" : ["question", "answer"],
+    "response_fields" : {
+        "Question" : "question",
+        "Answer" : "answer"
+    }
+}
