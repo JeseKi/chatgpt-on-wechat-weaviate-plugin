@@ -1,5 +1,6 @@
 import weaviate
 import json
+import codecs
 
 from common.log import logger
 from bridge.context import ContextType
@@ -69,8 +70,9 @@ class Weaviate_database(Plugin):
         
         # 将结果列表转换为JSON字符串
         results_str = json.dumps(results, indent=4)
-        
+        # 解码字符串
+        decoded_data = codecs.decode(results_str, 'unicode_escape')
         # 将查询结果添加到上下文内容中
-        e_context['context'].content += f"\n---\n{results_str}\n---\n以上是相关数据库所给的内容."
+        e_context['context'].content += f"\n---\n{decoded_data}\n---\n以上是相关数据库所给的内容."
         # 继续处理事件
         e_context.action = EventAction.CONTINUE
