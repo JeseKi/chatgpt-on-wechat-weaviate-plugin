@@ -25,7 +25,7 @@ class Weaviate_database(Plugin):
             }
         )
 
-    def on_handle_context(self, e_context: EventContext):
+    async def on_handle_context(self, e_context: EventContext):
         prompt = e_context['context'].content
         if e_context['context'].type != ContextType.TEXT:
             return
@@ -37,7 +37,7 @@ class Weaviate_database(Plugin):
         response_fields = config['response_fields']
 
         # 发起查询请求
-        response = (
+        response = await(
             self.weaviate_client.query
             .get(query_class, query_fields)
             .with_near_text({
